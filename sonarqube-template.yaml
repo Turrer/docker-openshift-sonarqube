@@ -11,7 +11,7 @@ objects:
     source:
       type: Git
       git:
-        uri: "https://github.com/wkulhanek/docker-openshift-sonarqube"
+        uri: "https://github.com/Turrer/docker-openshift-sonarqube.git"
     strategy:
       type: "Docker"
     output:
@@ -59,7 +59,7 @@ objects:
       name: postgresql
     strategy:
       recreateParams:
-        timeoutSeconds: 900
+        timeoutSeconds: 600
       resources: {}
       type: Recreate
     template:
@@ -76,7 +76,7 @@ objects:
             value: "${POSTGRESQL_PASSWORD}"
           - name: POSTGRESQL_DATABASE
             value: "${POSTGRESQL_DATABASE}"
-          image: registry.access.redhat.com/rhscl/postgresql-95-rhel7@sha256:a0bfc4aa195737c802988f7c636073644d7a821061d801004277c98d776c9cbf
+          image: registry.access.redhat.com/rhscl/postgresql-10-rhel7
           imagePullPolicy: IfNotPresent
           livenessProbe:
             failureThreshold: 3
