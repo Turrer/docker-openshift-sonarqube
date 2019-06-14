@@ -1,5 +1,5 @@
 FROM docker.io/centos:7
-LABEL maintainer="Wolfgang Kulhanek <WolfgangKulhanek@gmail.com>"
+LABEL maintainer="Copiado de Wolfgang Kulhanek <WolfgangKulhanek@gmail.com>; Oscar Torrero otorrero@gmail.com"
 
 ENV SONAR_VERSION=7.7 \
     SONARQUBE_HOME=/opt/sonarqube
